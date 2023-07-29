@@ -15,8 +15,7 @@ main{
 
 .outer-container-desktop{
     display: flex;
-    /*justify-content: space-between;*/
-    gap: 35em;
+    gap: 25em;
     width: 100%;
     position: relative;
 }
