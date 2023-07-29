@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.outer-container-desktop{
+    display: flex;
+    /*justify-content: space-between;*/
+    gap: 35em;
+    width: 100%;
+    position: relative;
+}
+
+.purple-container-desktop{
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: left; 
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    width: 30em;
+}
+
+.card-container-desktop{ 
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+
+.front-card-container,
+.back-card-container{
+    width: 100%;   
+}
+
+.front-card-img, .back-card-img{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-logo{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.card-number{
+    position: absolute;
+    top: 145px;
+    left: 40px;
+    color: #fff;
+    letter-spacing: 6px;
+    font-size: 20px;
+}
+
+.card-holder{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase; 
+}
+
+.card-info{
+    position: absolute;
+    top: 200px;
+    left: 360px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.back-card-container{
+    position: absolute;
+    top: 275px;
+    left: 70px;
+}
+
+.cvv{
+    position: absolute;
+    top: 110px;
+    left: 360px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+.white-container-desktop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px;
+    width: 25em; 
+    max-width: 100%;
+}
+
+form.hidden{
+   display: none;
+}
+
+.cardHolder-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardNumber-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.expiration-container, .cvc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container{
+    display: flex;
+    gap: 10px;
+}
+
+.exp-month, .exp-year{
+    width: 70px;
+}
+
+.cvcNums{
+    width: 200px;;
+}
+
+input[type=text]{
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: hsl(270, 3%, 87%);
+    font-size: 17px;
+}
+
+input[type=text]:focus{
+    outline: none;
+    border: 1px solid  hsl(278, 94%, 30%); 
+}
+
+
+
+label{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: hsl(278, 68%, 11%);
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+::placeholder{
+    color: hsl(270, 3%, 87%);
+    font-size: 17px;
+}
+
+.confirmButton{
+    background-color: hsl(278, 68%, 11%);
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#error-text-name{
+    font-size: 14px;
+    color: red;
+}
+
+.hide{
+    display: none;
+}
+
+
+#error-numbers-format{
+    font-size: 14px;
+    color: red;
+}
+
+#error-text-expiration{
+    font-size: 14px;
+    color: red;
+}
+
+#error-text-cvc{
+    font-size: 14px;
+    color: red;
+}
+
+.hidden{ /*Hide with classlist.add() or classlist.remove()*/
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.outer-container-success.show{
+    display: block;
+}
+
+.success-message-state{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 25em;
+    max-width: 100%;
+}
+
+.thank-you-h1{
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.thank-you-text{
+    color: hsl(279, 6%, 55%);
+    font-size: 20px;
+}
+
+.outer-container-success{
+    display: none;
+}
+
+.continueButton{
+    background-color: hsl(278, 68%, 11%);
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 20em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    main{
+        display: grid;
+        justify-content: center; /* Center the content horizontally */
+        align-items: start; /* Center the content vertically */
+        min-height: 100vh;
+    }
+
+    .outer-container-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6em;
+        width: 100%;
+    }
+
+    .purple-container-mobile{
+        background-image: url("images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-position: top; /* Move the background image to the top */
+        background-size: cover; /* Added to make the image cover the container */
+        height: 35vh; /* Adjust the height to cover the top half */
+        width: 100%;
+        position: relative; /* Add relative positioning to make absolute positioning work */
+    }
+
+    .card-container-mobile{
+        position: absolute; /* Add absolute positioning to position the cards within the purple container */
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the cards */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .front-card-container,
+    .back-card-container {
+        width: 100%;
+        max-width: 315px;
+        position: relative;
+    }
+
+    .front-card-img, .back-card-img{
+        width: 315px;
+    }
+
+    .front-card-container{
+        position: absolute;
+        top: 10em;
+        left: 5%;
+        z-index: 2;
+    }
+
+    .card-logo{
+        position: absolute;
+        width: 65px;
+        top: 12px;
+        left: 20px;
+    }
+
+    .card-number{
+        position: absolute;
+        top: 100px;
+        left: 25px;
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 17px;
+    }
+
+    .card-holder{
+        position: absolute;
+        top: 140px;
+        left: 25px;
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;    
+    }
+
+    .card-info{
+        position: absolute;
+        top: 140px;
+        left: 245px;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .back-card-container{
+        position: absolute;
+        top: 62px;
+        left: 71px;
+        z-index: 1;
+    }
+
+    .cvv{
+        position: absolute;
+        top: 77px;
+        left: 250px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .white-container-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 20px;
+        width: 25em; /* Adjust the width as needed */
+        max-width: 100%; /* Ensure the form doesn't exceed the screen width */
+    }
+
+    form.hidden{
+        display: none;
+    }
+
+    .cardHolder-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardNumber-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-section {
+        display: flex;
+        gap: 10px;
+    }
+
+    .expiration-container, .cvc-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-container{
+        display: flex;
+        gap: 10px;
+    }
+
+    .exp-month, .exp-year{
+        width: 70px;
+    }
+
+    .cvcNums{
+        width: 200px;;
+    }
+
+    input[type=text]{
+        padding: 10px;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: hsl(270, 3%, 87%);
+        font-size: 17px;
+    }
+
+    input[type=text]:focus{
+        outline: none;
+        border: 1px solid  hsl(278, 94%, 30%); 
+    }
+    
+
+    label{
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: hsl(278, 68%, 11%);
+        font-size: 13px;
+        font-weight: bolder;
+    }
+
+    ::placeholder{
+        color: hsl(270, 3%, 87%);
+        font-size: 17px;
+    }
+
+    .confirmButton{
+        background-color: hsl(278, 68%, 11%);
+        padding: 15px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+
+    #error-text-name{
+        font-size: 14px;
+        color: red;
+    }
+    
+    .hide{
+        display: none;
+    }
+
+
+    #error-numbers-format{
+        font-size: 14px;
+        color: red;
+    }
+
+    #error-text-expiration{
+        font-size: 14px;
+        color: red;
+    }
+
+    #error-text-cvc{
+        font-size: 14px;
+        color: red;
+    }
+
+    .hidden{ /*Hide with classlist.add() or classlist.remove()*/
+        display: none;
+    }
+
+    .show{
+        display: block;
+    }
+
+    .outer-container-success{
+        display: none;
+    }
+
+    .outer-container-success.show{
+        display: block;
+    }
+
+    .success-message-state{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width: 25em;
+        max-width: 100%;
+    }
+
+    .thank-you-h1{
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }
+
+    .thank-you-text{
+        color: hsl(279, 6%, 55%);
+        font-size: 20px;
+    }
+
+    .continueButton{
+        background-color: hsl(278, 68%, 11%);
+        padding: 15px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        width: 20em;
+        cursor: pointer;
+    }
+
+}

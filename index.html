@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Libre+Franklin:wght@300;600;700&family=Mina&family=Montserrat:wght@500&family=Outfit&family=Overpass&family=Roboto:wght@400;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="outer-container-desktop outer-container-mobile">
+      <div class="purple-container-desktop purple-container-mobile">
+        <div class="card-container-desktop card-container-mobile">
+          <div class="front-card-container">
+            <img src="images/bg-card-front.png" alt="front-card" class="front-card-img">
+            <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+
+            <div class="card-number">
+              <div class="number-vl">0000 0000 0000 0000</div>
+            </div>
+            <div class="card-holder">
+              <div class="name-vl">Jane Appleseed</div>
+            </div>
+            <div class="card-info">
+              <div class="expiration-date" id="expirationDate">00/00</div>
+            </div>
+   
+          </div>
+
+          <div class="back-card-container">
+            <img src="images/bg-card-back.png" alt="back-card" class="back-card-img">
+
+            <div class="cvv">
+               <div class="cvv-vl">000</div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+      <div class="white-container-desktop white-container-mobile">
+         <form>
+          <div class="cardHolder-container">
+            <label for="name">Cardholder Name</label>
+            <input type="text" name="name" id="name" class="cardName" placeholder="e.g. Jane Appleseed" maxlength="30" required>
+            <span id="error-text-name" class="hide">Can't be blank</span>
+          </div>
+
+          <div class="cardNumber-container">
+            <label for="card">Card Number</label>
+            <input type="text" name="card" id="card" class="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" required>
+            <span id="error-numbers-format" class="hide">Wrong format, numbers only</span>
+          </div>
+
+
+          <div class="input-section">
+            <div class="expiration-container">
+              <label>Exp. Date (MM/YY)</label>
+              <div class="input-container">
+                <input type="text" name="month" id="month" class="exp-month" placeholder="MM" maxlength="2" required>
+                <input type="text" name="year" id="year" class="exp-year" placeholder="YY" maxlength="2" required>
+              </div>
+              <span id="error-text-expiration" class="hide">Can't be blank</span>
+            </div>
+
+            <div class="cvc-container">
+              <label for="cvcNumber">CVC</label>
+              <input type="text" name="cvcNumber" id="cvcNumber" class="cvcNums" placeholder="e.g. 123" maxlength="3" required>
+              <span id="error-text-cvc" class="hide">Can't be blank</span>
+            </div>
+          </div>
+
+           <button class="confirmButton">Confirm</button>
+         </form>
+  <!-- Completed state start -->
+        <div class="outer-container-success">
+          <div class="success-message-state">
+            <div class="img-container">
+              <img src="images/icon-complete.svg" alt="check-img">
+            </div>
+            <h1 class="thank-you-h1">Thank you!</h1>
+            <p class="thank-you-text">We've added your card details</p>
+             <button class="continueButton">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/james-rod">James R Flores</a>.
+  </div>
+</body>
+</html>
